@@ -181,7 +181,7 @@ static struct cpufreq_frequency_table temp_limits[4][4] = {
 		{.frequency =          -1, .index = 60},
 		{.frequency = 1608 * 1000, .index = 75},
 	}, {	// 2 CPUs busy
-		{.frequency = 1800 * 1000, .index = 50},
+		{.frequency = 1704 * 1000, .index = 50},
 		{.frequency = 1608 * 1000, .index = 55},
 		{.frequency = 1416 * 1000, .index = 60},
 		{.frequency = 1200 * 1000, .index = 75},
@@ -563,7 +563,7 @@ static int rk3188_cpufreq_init_cpu0(struct cpufreq_policy *policy)
 #endif
 	clk_enable_dvfs(gpu_clk);
 	if (gpu_is_mali400)
-		dvfs_clk_enable_limit(gpu_clk, 133000000, 600000000);
+		dvfs_clk_enable_limit(gpu_clk, 133000000, 700000000);
 
 	clk_enable_dvfs(ddr_clk);
 
