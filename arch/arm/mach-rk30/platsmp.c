@@ -33,6 +33,25 @@ static void gic_raise_softirq_non_secure(const struct cpumask *mask, unsigned in
 	/* Convert our logical CPU mask into a physical one. */
 	for_each_cpu(cpu, mask)
 		map |= 1 << cpu_logical_map(cpu);
+
+
+#ifdef CONFIG_HOTPLUG_CPU
+static int rockchip_cpu_kill(unsigned int cpu)
+{
+	pmu_set_power_domain(0 + cpu, false);
+	return 1;
+}
+static void rockchip_cpu_die(unsigned int cpu)
+{
+	v7_exit_coherency_flush(louis);
+	while(1)
+		cpu_do_idle();
+}
+#endif
+
+
+
+
 #endif
 
 	/*
@@ -80,7 +99,10 @@ int __cpuinit boot_secondary(unsigned int cpu, struct task_struct *idle)
 		unsigned int i, ncores = scu_get_core_count(RK30_SCU_BASE);
 
 		for (i = 1; i < ncores; i++)
-			pmu_set_power_domain(PD_A9_0 + i, false);
+
+
+			pmu_set_power_domain(PD_A9_0 + i, false);		
+
 
 		memcpy(RK30_IMEM_BASE, rk30_sram_secondary_startup, sz);
 		flush_icache_range((unsigned long)RK30_IMEM_BASE, (unsigned long)RK30_IMEM_BASE + sz);
