@@ -5,6 +5,12 @@
 menu "Input device support"
 	depends on !S390
 
+
+
+
+
+
+
 config INPUT
 	tristate "Generic input layer (needed for keyboard, mouse, ...)" if EXPERT
 	default y
@@ -199,6 +205,12 @@ source "drivers/input/jogball/Kconfig"
 source "drivers/input/lightsensor/Kconfig"
 
 source "drivers/input/sensors/Kconfig"
+
+
+##Añadido remotectl
+
+source "drivers/input/remotectl/Kconfig"
+
 
 source "drivers/input/encryption/Kconfig"
 endif
