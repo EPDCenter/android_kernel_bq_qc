@@ -3891,7 +3891,7 @@ static void __init rk30_reserve(void)
         {.frequency = 1416 * 1000,      .index = 1250 * 1000},
         {.frequency = 1608 * 1000,      .index = 1275 * 1000},
         {.frequency = 1704 * 1000,      .index = 1300 * 1000},
-        {.frequency = 1780 * 1000,      .index = 1325 * 1000},
+        {.frequency = 1770 * 1000,      .index = 1325 * 1000},
         {.frequency = CPUFREQ_TABLE_END},
 };
 
@@ -3940,7 +3940,7 @@ static struct cpufreq_frequency_table dvfs_arm_table[] = {
 #endif
         {.frequency = 1608 * 1000,      .index = 1275 * 1000},
         {.frequency = 1704 * 1000,      .index = 1300 * 1000},
-        {.frequency = 1780 * 1000,      .index = 1325 * 1000},
+        {.frequency = 1770 * 1000,      .index = 1325 * 1000},
         {.frequency = CPUFREQ_TABLE_END},
 };
 
