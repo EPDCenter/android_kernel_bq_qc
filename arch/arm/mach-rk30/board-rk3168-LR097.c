@@ -3891,7 +3891,7 @@ static void __init rk30_reserve(void)
         {.frequency = 1416 * 1000,      .index = 1250 * 1000},
         {.frequency = 1608 * 1000,      .index = 1275 * 1000},
         {.frequency = 1704 * 1000,      .index = 1300 * 1000},
-        {.frequency = 1752 * 1000,      .index = 1325 * 1000},
+        {.frequency = 1752 * 1000,      .index = 1375 * 1000},
         {.frequency = CPUFREQ_TABLE_END},
 };
 
@@ -3909,7 +3909,7 @@ static struct cpufreq_frequency_table dvfs_gpu_table[] = {
 	{.frequency = 400 * 1000,       .index = 1100 * 1000},
 	{.frequency = 600 * 1000,       .index = 1250 * 1000},
         {.frequency = 700 * 1000,       .index = 1300 * 1000},
-        {.frequency = 740 * 1000,       .index = 1325 * 1000},
+        {.frequency = 740 * 1000,       .index = 1350 * 1000},
 	{.frequency = CPUFREQ_TABLE_END},
 };
 
@@ -3919,7 +3919,7 @@ static struct cpufreq_frequency_table dvfs_ddr_table[] = {
 	{.frequency = 300 * 1000 + DDR_FREQ_VIDEO,      .index = 1000 * 1000},
 #endif
 	//{.frequency = 396 * 1000 + DDR_FREQ_NORMAL,     .index = 1100 * 1000},
-	{.frequency = 800 * 1000 + DDR_FREQ_NORMAL,     .index = 1250 * 1000},
+	{.frequency = 800 * 1000 + DDR_FREQ_NORMAL,     .index = 1275 * 1000},
 	{.frequency = CPUFREQ_TABLE_END},
 };
 #else
@@ -3990,7 +3990,7 @@ static struct cpufreq_frequency_table dvfs_gpu_table[] = {
 	{.frequency = 400 * 1000,       .index = 1100 * 1000},
 	{.frequency = 600 * 1000,       .index = 1200 * 1000},
         {.frequency = 700 * 1000,       .index = 1250 * 1000},
-	{.frequency = 740 * 1000,       .index = 1275 * 1000},
+	{.frequency = 740 * 1000,       .index = 1325 * 1000},
 	{.frequency = CPUFREQ_TABLE_END},
 };
 
