@@ -57,6 +57,21 @@ config IOSCHED_SIO
 	  Dis: slow random-read speeds on flash drives, compared to others;
 	       sequential-read speeds on flash drives not so good
 
+config IOSCHED_ROW
+ 	tristate "ROW I/O scheduler"
+	default y
+	---help---
+	  Read over Write scheduler. Optimal for mobile devices.
+
+
+
+
+
+
+
+
+
+
 config IOSCHED_VR
 	tristate "V(R) I/O scheduler"
 	default y
@@ -122,7 +137,7 @@ config DEFAULT_IOSCHED
 	default "sio" if DEFAULT_SIO
  	default "vr" if DEFAULT_VR
 	default "bfq" if DEFAULT_BFQ
-	
+	default "row" if DEFAULT_ROW	
 	
 endmenu
 
