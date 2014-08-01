@@ -7,7 +7,7 @@
 ||||| 
 |||||Y se compilan así:
 |||||
-||||| $ make edison2_qc_defconfig
+||||| $ make edison2_442_qc_defconfig (Para 4.4.2)	edison2_422_qc_defconfig(Para 4.2.2) edison2_444_qc_defconfig (Para 4.4.4)
 |||||
 |||||
 ||||| $ make -jX kernel.img   Nota: Debéis sustitui la "X" de "make -jX" por el número de hilos de vuestro procesador.
