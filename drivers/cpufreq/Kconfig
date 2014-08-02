@@ -50,6 +50,16 @@ choice
 	  This option sets which CPUFreq governor shall be loaded at
 	  startup. If in doubt, select 'performance'.
 
+config CPU_FREQ_DEFAULT_GOV_HYPER
+ 	bool "hyper"
+ 	select CPU_FREQ_GOV_HYPER
+ 	help
+ 	  Use the CPUFreq governor 'hyper' as default. See hyper
+ 	  governor help for more details.
+
+
+
+
 
 
 config CPU_FREQ_DEFAULT_GOV_LIONHEART
@@ -189,6 +199,14 @@ config CPU_FREQ_GOV_PERFORMANCE
 
 	  If in doubt, say Y.
 
+config CPU_FREQ_GOV_HYPER
+ 	tristate "'hyper' cpufreq governor"
+ 	depends on CPU_FREQ
+ 	help
+ 	  Formerly known as kenobi. Aggressive smart and smooth, and based on
+ 	  Ondemand and equipped with several features of Ondemandx. In
+ 	  suspend mode, the maxium frequency is 500MHz.
+
 
 config CPU_FREQ_GOV_LULZACTIVE
  	tristate "'lulzactive' cpufreq governor"
@@ -200,12 +218,6 @@ config CPU_FREQ_GOV_LULZACTIVE
  	  global scaling minimum frequency.
 
 
-
-
-
-
-
-
 config CPU_FREQ_GOV_LIONHEART
  	tristate "'lionheart' cpufreq governor"
  	depends on CPU_FREQ
@@ -214,10 +226,6 @@ config CPU_FREQ_GOV_LIONHEART
  	  Tunables (such as thresholds and sampling rate) changed so the
  	  governor behaves more like the Performance one, with very
  	  aggressive scaling.
-
-
-
-
 
 
 
@@ -232,12 +240,6 @@ config CPU_FREQ_GOV_ONDEMANDX
  	  do fast frequency switching which are very low latency frequency
  	  transitions. Performance of ondemand/ondemandx varies for different
  	  io schedulers. Ondemand/ondemandx goes best with SIO io scheduler.
-
-
-
-
-
-
 
 
 config CPU_FREQ_GOV_POWERSAVE
