@@ -33,7 +33,7 @@ config LOGO_PIPO_CLUT224
 	
 
 
-config LOGO_KERNELOCENGEL_CLUT224
+config LOGO_CUSTOM_CLUT224
     bool "Logo Center"
    default y
 
