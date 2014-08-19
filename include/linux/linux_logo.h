@@ -50,6 +50,7 @@ extern const struct linux_logo logo_sun_clut224;
 extern const struct linux_logo logo_superh_mono;
 extern const struct linux_logo logo_superh_vga16;
 
+extern const struct linux_logo logo_1custom_clut224;
 extern const struct linux_logo logo_custom_clut224;
 extern const struct linux_logo logo_superh_clut224;
 extern const struct linux_logo logo_m32r_clut224;

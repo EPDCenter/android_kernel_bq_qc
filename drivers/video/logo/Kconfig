@@ -38,6 +38,11 @@ config LOGO_CUSTOM_CLUT224
    default y
 
 
+config LOGO_1CUSTOM_CLUT224
+    bool "Logo Center Curie 2 QC"
+   default y
+
+
 
 
 

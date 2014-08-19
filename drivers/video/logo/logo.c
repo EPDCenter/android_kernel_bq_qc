@@ -85,6 +85,18 @@ const struct linux_logo * __init_refok fb_find_logo(int depth)
 		logo = &logo_linux_clut224;
 #endif
 
+
+
+
+#ifdef CONFIG_LOGO_1CUSTOM_CLUT224
+    /* Custom Linux logo */
+    logo = &logo_1custom_clut224;
+#endif
+
+
+
+
+
 #ifdef CONFIG_LOGO_CUSTOM_CLUT224
     /* Custom Linux logo */
     logo = &logo_custom_clut224;
