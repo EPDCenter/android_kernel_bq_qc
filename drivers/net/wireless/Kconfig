@@ -17,6 +17,11 @@ menuconfig WLAN
 
 if WLAN
 
+
+
+
+
+
 config WLAN_80211
 	bool "Wireless LAN (IEEE 802.11)"
 	depends on NETDEVICES
@@ -36,12 +41,20 @@ config AIDC
 
 	---help---
 
+
+
+
 config BCM_OOB_ENABLED
 	bool "Enable wifi host wake up function"
 	depends on RKWIFI
 	select RK29_SDIO_IRQ_FROM_GPIO
 	default y
 	---help---
+
+
+
+
+
 
 choice
 	prompt "WiFi device driver support"

@@ -31,6 +31,17 @@ config LOGO_PIPO_CLUT224
 	bool "Standard 224-pipo Linux logo"
 	default n
 	
+config LOGO_OMNIC2QC_CLUT224
+    bool "OmniROMLogoC2QC"
+   default y
+
+
+
+
+config LOGO_OMNIE2QC_CLUT224
+    bool "OmniROMLogoE2QC"
+   default y
+
 
 
 config LOGO_CUSTOM_CLUT224
