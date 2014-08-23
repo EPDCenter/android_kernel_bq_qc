@@ -3,7 +3,7 @@
 
 |||||Las fuentes se descargan de la siguiente forma:
 |||||
-||||| $ git clone https://gitserver.epdcenter.es:8090/Sagformas/fuentes-4-4-2-bq-edison-2-quad-core.git
+||||| $ git clone https://github.com/EPDCenterSpain/bq-QC.git
 ||||| 
 |||||Y se compilan así:
 |||||
