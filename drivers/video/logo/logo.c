@@ -137,15 +137,15 @@ const struct linux_logo * __init_refok fb_find_logo(int depth)
 		/* Sun Linux logo */
 		logo = &logo_sun_clut224;
 #endif
-#ifdef CONFIG_LOGO_OMNIC2QC_CLUT224
+#ifdef CONFIG_LOGO_LC2QC_CLUT224
     /* Custom Linux logo */
-    logo = &logo_omnic2qc_clut224;
+    logo = &logo_Lc2qc_clut224;
 #endif
 
 
-#ifdef CONFIG_LOGO_OMNIE2QC_CLUT224
+#ifdef CONFIG_LOGO_LE2QC_CLUT224
     /* Custom Linux logo */
-    logo = &logo_omnie2qc_clut224;
+    logo = &logo_Le2qc_clut224;
 #endif
 
 

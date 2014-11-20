@@ -31,15 +31,15 @@ config LOGO_PIPO_CLUT224
 	bool "Standard 224-pipo Linux logo"
 	default n
 	
-config LOGO_OMNIC2QC_CLUT224
-    bool "OmniROMLogoC2QC"
+config LOGO_LC2QC_CLUT224
+    bool "Android L LogoC2QC"
    default y
 
 
 
 
-config LOGO_OMNIE2QC_CLUT224
-    bool "OmniROMLogoE2QC"
+config LOGO_LE2QC_CLUT224
+    bool "Android L LogoE2QC"
    default y
 
 
