@@ -2441,8 +2441,7 @@ static struct cw_bat_platform_data cw_bat_platdata = {
 
 #ifdef CONFIG_RK30_PWM_REGULATOR
 static int pwm_voltage_map[] = {
-	800000,825000,850000, 875000,900000, 925000 ,950000, 975000,1000000, 1025000, 1050000, 1075000, 1100000, 1125000, 1150000, 1175000, 1200000, 1225000, 1250000, 1275000, 1300000, 1325000, 1350000,1375000,1425000
-};
+	800000,825000,850000, 875000,900000, 925000 ,950000, 975000,1000000, 1025000, 1050000, 1075000, 1100000, 1125000, 1150000, 1175000, 1200000, 1225000, 1250000, 1275000, 1300000, 1325000, 1350000,1375000,1400000,1425000};
 static struct regulator_consumer_supply pwm_dcdc1_consumers[] = {
 	{
 		.supply = "vdd_cpu",
@@ -3907,7 +3906,7 @@ static struct cpufreq_frequency_table dvfs_gpu_table[] = {
 	{.frequency = 400 * 1000,       .index = 1100 * 1000},
 	{.frequency = 600 * 1000,       .index = 1250 * 1000},
         {.frequency = 700 * 1000,       .index = 1300 * 1000},
-        {.frequency = 740 * 1000,       .index = 1350 * 1000},
+        {.frequency = 760 * 1000,       .index = 1350 * 1000},
 	{.frequency = CPUFREQ_TABLE_END},
 };
 
@@ -3917,7 +3916,7 @@ static struct cpufreq_frequency_table dvfs_ddr_table[] = {
 	{.frequency = 300 * 1000 + DDR_FREQ_VIDEO,      .index = 1000 * 1000},
 #endif
 	//{.frequency = 396 * 1000 + DDR_FREQ_NORMAL,     .index = 1100 * 1000},
-	{.frequency = 690 * 1000 + DDR_FREQ_NORMAL,     .index = 1275 * 1000},
+	{.frequency = 710 * 1000 + DDR_FREQ_NORMAL,     .index = 1275 * 1000},
 	{.frequency = CPUFREQ_TABLE_END},
 };
 #else
@@ -3937,7 +3936,9 @@ static struct cpufreq_frequency_table dvfs_arm_table[] = {
 		{.frequency = 1416 * 1000,      .index = 1250 * 1000},
 #endif
         {.frequency = 1608 * 1000,      .index = 1350 * 1000},
-        {.frequency = CPUFREQ_TABLE_END},
+        {.frequency = 1704 * 1000,      .index = 1375 * 1000},
+        {.frequency = 1752 * 1000,      .index = 1400 * 1000},
+	{.frequency = CPUFREQ_TABLE_END},
 };
 
 #ifdef CONFIG_GPU_FREQ_LIMITED_BY_TEMP
@@ -3969,7 +3970,7 @@ struct cpufreq_frequency_table dvfs_arm_table_1600[] = {
 		{.frequency = 1416 * 1000,      .index = 1250 * 1000},
 #endif
         {.frequency = 1608 * 1000,      .index = 1350 * 1000},
-        {.frequency = CPUFREQ_TABLE_END},
+       	{.frequency = CPUFREQ_TABLE_END},
 };
 #endif
 
@@ -3998,7 +3999,7 @@ static struct cpufreq_frequency_table dvfs_ddr_table[] = {
 #ifdef CONFIG_DDR_SUPPORT_528M
 	{.frequency = 528 * 1000 + DDR_FREQ_NORMAL,     .index = 1200 * 1000},
 #elif CONFIG_DDR_SUPPORT_480M
-	{.frequency = 480 * 1000 + DDR_FREQ_NORMAL, 	.index = 1275 * 1000},
+	{.frequency = 710 * 1000 + DDR_FREQ_NORMAL, 	.index = 1275 * 1000},
 #elif CONFIG_DDR_SUPPORT_410M
 	{.frequency = 410 * 1000 + DDR_FREQ_NORMAL,     .index = 1200 * 1000},
 #elif CONFIG_DDR_SUPPORT_336M
