@@ -294,6 +294,7 @@ static struct cpufreq_frequency_table arm_high_logic_table[] = {
         {.frequency = 1608 * DVFS_KHZ, .index = 25 * DVFS_MV},
         {.frequency = 1704 * DVFS_KHZ, .index = 25 * DVFS_MV},
 	{.frequency = 1752 * DVFS_KHZ, .index = 25 * DVFS_MV},
+	{.frequency = 1800 * DVFS_KHZ, .index = 25 * DVFS_MV},
 	{.frequency = CPUFREQ_TABLE_END},
 };
 
@@ -302,6 +303,7 @@ static struct cpufreq_frequency_table logic_high_arm_table[] = {
         {.frequency = 1608 * DVFS_KHZ, .index = 75 * DVFS_MV},
         {.frequency = 1704 * DVFS_KHZ, .index = 50 * DVFS_MV},
 	{.frequency = 1752 * DVFS_KHZ, .index = 50 * DVFS_MV},
+	{.frequency = 1800 * DVFS_KHZ, .index = 25 * DVFS_MV},
 	{.frequency = CPUFREQ_TABLE_END},
 };
 #else
@@ -310,6 +312,7 @@ static struct cpufreq_frequency_table arm_high_logic_table[] = {
         {.frequency = 1608 * DVFS_KHZ, .index = 100 * DVFS_MV},
         {.frequency = 1704 * DVFS_KHZ, .index = 100 * DVFS_MV},
 	{.frequency = 1752 * DVFS_KHZ, .index = 100 * DVFS_MV},
+	{.frequency = 1800 * DVFS_KHZ, .index = 100 * DVFS_MV},
 	{.frequency = CPUFREQ_TABLE_END},
 };
 static struct cpufreq_frequency_table logic_high_arm_table[] = {
@@ -318,6 +321,7 @@ static struct cpufreq_frequency_table logic_high_arm_table[] = {
         {.frequency = 1608 * DVFS_KHZ, .index = 100 * DVFS_MV},
 	{.frequency = 1704 * DVFS_KHZ, .index = 50 * DVFS_MV},
 	{.frequency = 1752 * DVFS_KHZ, .index = 25 * DVFS_MV},
+	{.frequency = 1800 * DVFS_KHZ, .index = 25 * DVFS_MV},
 };
 #endif
 

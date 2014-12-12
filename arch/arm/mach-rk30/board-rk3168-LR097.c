@@ -3938,6 +3938,7 @@ static struct cpufreq_frequency_table dvfs_arm_table[] = {
         {.frequency = 1608 * 1000,      .index = 1350 * 1000},
         {.frequency = 1704 * 1000,      .index = 1375 * 1000},
         {.frequency = 1752 * 1000,      .index = 1400 * 1000},
+	{.frequency = 1800 * 1000,      .index = 1425 * 1000},
 	{.frequency = CPUFREQ_TABLE_END},
 };
 
