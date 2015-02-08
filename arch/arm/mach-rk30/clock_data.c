@@ -1071,9 +1071,9 @@ static int arm_pll_clk_set_rate(struct clk *clk, unsigned long rate)
 static const struct apll_clk_set apll_clks[] = {
 	//rate, nr ,nf ,no,core_div,peri,axi,hclk,pclk,_ahb2apb
 	//_APLL_SET_CLKS(1800, 1, 75, 1, 8, 41,  41,  81,21),
-	//_APLL_SET_CLKS(1752, 1, 73, 1, 8, 41,  41,  81,21),
-	//_APLL_SET_CLKS(1704, 1, 71, 1, 8, 41,  41,  81,21),
-	//_APLL_SET_CLKS(1656, 1, 69, 1, 8, 41,  41,  81,21),
+	_APLL_SET_CLKS(1752, 1, 73, 1, 8, 41,  41,  81,21),
+	_APLL_SET_CLKS(1704, 1, 71, 1, 8, 41,  41,  81,21),
+	_APLL_SET_CLKS(1656, 1, 69, 1, 8, 41,  41,  81,21),
 	_APLL_SET_CLKS(1608, 1, 67, 1, 8, 41, 21, 41, 21),
 	_APLL_SET_CLKS(1560, 1, 65, 1, 8, 41, 21, 41, 21),
 	_APLL_SET_CLKS(1512, 1, 63, 1, 8, 41, 21, 41, 21),
@@ -2643,8 +2643,8 @@ GATE_CLK(hclk_rga,		hclk_cpu, HCLK_RGA);
 GATE_CLK(hclk_hdmi,	hclk_cpu, HCLK_HDMI);
 //GATE_CLK(hclk_vidoe_h2h,	hclk_cpu, ); ???
 /*************************pclk_cpu***********************/
-GATE_CLK(pwm01,	pclk_cpu, PCLK_PWM01);//pwm 0、1
-//GATE_CLK(pclk_pwm1,	pclk_cpu, PCLK_PWM01);//pwm 0、1
+GATE_CLK(pwm01,	pclk_cpu, PCLK_PWM01);//pwm 0\A1\A21
+//GATE_CLK(pclk_pwm1,	pclk_cpu, PCLK_PWM01);//pwm 0\A1\A21
 GATE_CLK(pclk_timer0,	pclk_cpu, PCLK_TIMER0);
 GATE_CLK(pclk_timer1,	pclk_cpu, PCLK_TIMER1);
 GATE_CLK(pclk_timer2,	pclk_cpu, PCLK_TIMER2);
@@ -2917,7 +2917,7 @@ static struct clk_lookup clks[] = {
 	//CLK1(hclk_hdmi),
 	//CLK1(hclk_vidoe_h2h,	hclk_cpu, ); ???
 	/*************************pclk_cpu***********************/
-	CLK1(pwm01),//pwm 0、1
+	CLK1(pwm01),//pwm 0\A1\A21
 
 	//CLK1(pclk_timer0),
 	//CLK1(pclk_timer1),
@@ -3179,7 +3179,7 @@ static void __init rk30_init_enable_clocks(void)
 	
 		/*************************pclk_cpu***********************/
 		
-		//clk_enable_nolock(&clk_pwm01);//pwm 0、1
+		//clk_enable_nolock(&clk_pwm01);//pwm 0\A1\A21
 		#if 0
 	
 	
